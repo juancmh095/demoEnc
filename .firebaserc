@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "fir-de86c",
+    "demo": "fir-de86c"
+  },
+  "targets": {}
+}

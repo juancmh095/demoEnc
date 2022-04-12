@@ -1,0 +1,24 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <form class="example-form" (submit)="generateMulti()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Ingrese el numero que desea comprobar</mat-label>
+          <input matInput type="number" placeholder="0-10000" name="numero" [(ngModel)]="numero" />
+        </mat-form-field>
+      </form>
+
+      <h3>Resultados:</h3>
+      <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
+      <div
+        [ngClass]="{
+          danger: resultado.class == 'danger',
+          blue: resultado.class == 'blue',
+          success: resultado.class == 'success'
+        }"
+      >
+        <span *ngFor="let item of resultado.numeros"> {{ item }}, </span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

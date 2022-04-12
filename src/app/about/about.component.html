@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-card>
+    <h1>
+      <mat-card-title translate>HISTORIAL DE CONSULTAS</mat-card-title>
+    </h1>
+    <mat-card-content>
+      <mat-selection-list #multiplos [multiple]="false">
+        <mat-list-option *ngFor="let item of data" [value]="item.multiplos" (click)="validateColor(item)">
+          <strong>Numero: </strong>{{ item.numero + ' - ' }}{{ item.creation.seconds | date: 'short' }}
+        </mat-list-option>
+      </mat-selection-list>
+
+      <p id="selection-list">Multiplos: {{ multiplos.selectedOptions.selected[0]?.value }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
