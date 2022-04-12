@@ -2,7 +2,7 @@
 prueba de reclutamiento
 
 
-#MULTIPLOS
+# MULTIPLOS
 
 run proyect -> npm start
 port -> 4200
